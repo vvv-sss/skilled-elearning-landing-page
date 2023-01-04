@@ -1,0 +1,490 @@
+/* === CSS Reset === */
+/* #region */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* #endregion */
+
+/* === Variables === */
+/* #region */
+
+:root {
+    --color-primary-100: hsl(341, 92%, 62%);
+
+    --color-accent-100: hsl(341, 100%, 83%);
+
+    --color-neutral-100: hsl(232, 10%, 56%);
+    --color-neutral-200: hsl(233, 54%, 16%);
+    --color-neutral-300: hsl(234, 25%, 52%);
+    --color-neutral-400: hsl(0, 0%, 100%);
+
+    --linear-gradient-100: linear-gradient(hsl(322, 87%, 55%), hsl(13, 100%, 64%));
+    --linear-gradient-200: linear-gradient(hsl(237, 100%, 64%), hsl(322, 87%, 55%));
+    --linear-gradient-300: linear-gradient(180deg, hsla(0, 0%, 100%, 1) 0%, hsla(234, 100%, 97%, 1) 100%);
+
+
+    --fs-100: 1rem;        /* 16px */
+    --fs-200: 1.13rem;     /* 18px */
+    --fs-250: 1.13rem;     /* 20px */
+    --fs-300: 1.5rem;      /* 24px */
+    --fs-400: 2rem;        /* 32px */
+    --fs-500: 2.5rem;      /* 40px */
+    --fs-600: 3.5rem;      /* 56px */
+
+    --fs-body-S: var(--fs-100);
+    --fs-body-M: var(--fs-200);
+    --fs-heading-S: var(--fs-300);
+    --fs-heading-M: var(--fs-400);
+    --fs-heading-L: var(--fs-500);
+    --fs-heading-XL: var(--fs-600);
+
+    --fw-medium: 500;
+    --fw-bold: 700;
+    --fw-extrabold: 800;
+
+    --line-50: 1.63rem;    /* 26px */
+    --line-100: 1.75rem;   /* 28px */
+    --line-150: 2rem;      /* 32px */
+    --line-200: 2.5rem;    /* 40px */
+    --line-300: 3.19rem;   /* 51px */
+    --line-400: 4.38rem;   /* 70px */
+}
+/* #endregion */
+
+/* === Global Styles === */
+/* #region */
+
+body {
+    padding: 1rem;
+    background: var(--linear-gradient-300);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+/* #endregion */
+
+/* === Header Section === */
+/* #region */
+
+.header-container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.38rem;
+}
+
+.header__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8.75rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background-color: var(--color-neutral-200);
+    color: var(--color-neutral-400);
+    font-size: var(--fs-body-S);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    transition: 0.1s;
+    z-index: 1;
+}
+
+.header__btn:hover {
+    background-color: var(--color-neutral-300);
+}
+/* #endregion */
+
+/* === Main Section === */
+/* #region */
+
+/* Hero Section */
+
+.hero-section {
+    position: relative;
+}
+
+.hero-section__text-block {
+    display: inline-block;
+}
+
+.hero-section__text-block h1 {
+    max-width: 28rem;
+    margin-bottom: 1.63rem;
+    color: var(--color-neutral-200);
+    font-size: var(--fs-heading-L);
+    font-weight: var(--fw-extrabold);
+    line-height: var(--line-300);
+}
+
+.hero-section__text-block p {
+    margin-bottom: 1.5rem;
+    color: var(--color-neutral-100);
+    font-size: var(--fs-body-S);
+    font-weight: var(--fw-medium);
+    line-height: var(--line-100);
+}
+
+.hero-section__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 10.44rem;
+    height: 3.5rem;
+    border-radius: 1.75rem;
+    margin-bottom: 2.81rem;
+    background: var(--linear-gradient-100);
+    color: var(--color-neutral-400);
+    font-size: var(--fs-body-S);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.hero-section__btn:hover {
+    background: 
+        linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+        linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
+}
+
+.hero-section__banner-block {
+    display: inline-block;
+}
+
+.hero-section__banner-block img {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Courses Section */
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 0.63rem;
+    margin-bottom: 5rem;
+}
+
+.courses h2 {
+    box-sizing: border-box;
+    width: 21.19rem;
+    padding: 1.5rem 1.75rem 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2.7rem;
+    background: var(--linear-gradient-100);
+    color: var(--color-neutral-400);
+    font-size: var(--fs-heading-S);
+    font-weight: var(--fw-bold);
+    line-height: var(--line-150);
+}
+
+.courses__block {
+    box-sizing: border-box;
+    width: 21.19rem;
+    padding: 0 1.75rem 2rem;
+    margin-bottom: 2.7rem;
+    border-radius: 0.63rem;
+    box-shadow: 0px 25px 50px 0px hsla(233, 92%, 29%, 0.04);
+}
+
+.courses__block-icon {
+    margin-top: -1.7rem;
+    margin-bottom: 1.5rem;
+}
+
+.courses__block-name {
+    margin-bottom: 1rem;
+    color: var(--color-neutral-200);
+    font-size: var(--fs-250);
+    font-weight: var(--fw-bold);
+}
+
+.courses__block-info {
+    max-width: 17rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-neutral-100);
+    font-size: var(--fs-body-S);
+    font-weight: var(--fw-medium);
+    line-height: var(--line-50);
+    text-decoration: none;
+}
+
+.courses__block-link {
+    color: var(--color-primary-100);
+    font-size: var(--fs-body-M);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.courses__block-link:hover {
+    color: var(--color-accent-100);
+}
+
+/* #endregion */
+
+/* === Footer === */
+/* #region */
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: calc(100% + 2rem);
+    height: 7.5rem;
+    padding: 0 1rem;
+    margin: 0 -1rem -1rem;
+    background-color: var(--color-neutral-200);
+    overflow-x: hidden;
+}
+
+.footer__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8.75rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    background: var(--linear-gradient-200);
+    color: var(--color-neutral-400);
+    font-size: var(--fs-body-S);
+    font-weight: var(--fw-bold);
+    text-decoration: none;
+    transition: 0.1s;
+}
+
+.footer__btn:hover {
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    var(--linear-gradient-200);
+}
+
+/* #endregion */
+
+/* === Media Queries === */
+/* #region */
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+
+    body {
+        margin: 1.5rem 1.44rem;
+    }
+
+    .footer-container {
+        width: calc(100% + 4.88rem);
+        padding: 0 2.44rem;
+        margin: 0 -2.88rem -2.5rem;
+    }
+}
+
+@media only screen and (max-width: 739px) {
+
+    .hero-section__banner-block {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-section__banner-block img {
+        max-width: 25rem;
+        transform: scale(1.1);
+    }
+
+}
+
+@media only screen and (min-width: 740px) and (max-width: 1250px) {
+
+    .header-container {
+        margin-bottom: 6.19rem;
+    }
+
+    .hero-section__text-block {
+        max-width: 25rem;
+    }
+
+    .hero-section__banner-block {
+        position: absolute;
+        width: 15rem;
+        height: 15rem;
+        right: 0%;
+    }
+
+    .hero-section__banner-block img {
+        top: -15%;
+        right: -45%;
+        transform: scale(2.9);
+    }
+
+    .courses {
+        margin-top: 4rem;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .courses h2 {
+        padding-top: 3.5rem;
+        padding-left: 2rem;
+    }
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1250px) {
+
+    body {
+        margin: 1.5rem 5rem;
+    }
+
+    .hero-section {
+        margin-bottom: 7rem;
+    }
+
+    .hero-section__banner-block img {
+        transform: scale(3);
+    }
+
+    .courses__block-info {
+        height: 6.5rem;
+    }
+
+    .footer-container {
+        width: calc(100% + 12rem);
+        padding: 0 6rem;
+        margin: 0 -6rem -2.5rem;
+    }
+}
+
+@media only screen and (min-width: 1251px) {
+
+    body {
+        margin: 1.5rem 9.31rem;
+    }
+
+    .header-container {
+        margin-bottom: 11.13rem;
+    }
+
+    .hero-section {
+        margin-bottom: 10.13rem;
+    }
+
+    .hero-section__btn {
+        height: 3.94rem;
+        border-radius: 1.97rem;
+    }
+
+    .hero-section__text-block {
+        max-width: 32rem;
+    }
+
+    .hero-section__text-block h1 {
+        max-width: 32rem;
+        margin-bottom: 1.81rem;
+        font-size: var(--fs-heading-XL);
+        line-height: var(--line-400);
+    }
+
+    .hero-section__text-block p {
+        max-width: 27rem;
+        margin-bottom: 2.5rem;
+        font-size: var(--fs-body-M);
+    }
+
+    .hero-section__banner-block {
+        position: absolute;
+        right: 0%;
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .hero-section__banner-block img {
+        top: -20%;
+        right: -45%;
+        transform: scale(4.5);
+    }
+
+    .courses {
+        column-gap: 1.88rem;
+        max-width: 75rem;
+        margin: 0 auto;
+    }
+
+    .courses h2 {
+        width: 21.87rem;
+        margin-bottom: 5.2rem;
+        font-size: var(--fs-heading-M);
+        line-height: var(--line-200);
+    }
+
+    .courses__block {
+        width: 21.87rem;
+        padding: 0 2rem 2.5rem;
+        margin-bottom: 5.2rem;
+    }
+
+    .courses__block-icon {
+        margin-bottom: 2rem;
+    }
+
+    .courses__block-name {
+        margin-bottom: 1.5rem;
+        font-size: var(--fs-heading-S);
+    }
+
+    .courses__block-info {
+        height: 7rem;
+        font-size: var(--fs-body-M);
+        line-height: var(--line-100);
+    }
+
+    .footer-container {
+        width: calc(100% + 20.62rem);
+        padding: 0 10.31rem;
+        margin: 0 -10.31rem -2.5rem;
+    }
+}
+
+/* #endregion */
