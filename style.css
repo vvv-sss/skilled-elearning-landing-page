@@ -101,23 +101,37 @@ body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     overflow-x: hidden;
 }
+
 /* #endregion */
 
 /* === Header Section === */
 /* #region */
 
 .header-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     row-gap: 1rem;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     margin-bottom: 2.38rem;
 }
 
 .header__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 8.75rem;
     height: 3rem;
@@ -127,6 +141,8 @@ body {
     font-size: var(--fs-body-S);
     font-weight: var(--fw-bold);
     text-decoration: none;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
     transition: 0.1s;
     z-index: 1;
 }
@@ -134,6 +150,7 @@ body {
 .header__btn:hover {
     background-color: var(--color-neutral-300);
 }
+
 /* #endregion */
 
 /* === Main Section === */
@@ -167,8 +184,14 @@ body {
 }
 
 .hero-section__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 10.44rem;
     height: 3.5rem;
@@ -179,10 +202,18 @@ body {
     font-size: var(--fs-body-S);
     font-weight: var(--fw-bold);
     text-decoration: none;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
     transition: 0.1s;
 }
 
 .hero-section__btn:hover {
+    background: 
+        -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), 
+        -webkit-gradient(linear, left top, left bottom, from(#FF6F48), to(#F02AA6));
+    background: 
+        -o-linear-gradient(bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+        -o-linear-gradient(top, #FF6F48 0%, #F02AA6 100%);
     background: 
         linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
         linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%);
@@ -201,14 +232,22 @@ body {
 /* Courses Section */
 
 .courses {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-column-gap: 0.63rem;
+    -moz-column-gap: 0.63rem;
     column-gap: 0.63rem;
     margin-bottom: 5rem;
 }
 
 .courses h2 {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 21.19rem;
     padding: 1.5rem 1.75rem 2rem;
@@ -222,11 +261,13 @@ body {
 }
 
 .courses__block {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     width: 21.19rem;
     padding: 0 1.75rem 2rem;
     margin-bottom: 2.7rem;
     border-radius: 0.63rem;
+    -webkit-box-shadow: 0px 25px 50px 0px hsla(233, 92%, 29%, 0.04);
     box-shadow: 0px 25px 50px 0px hsla(233, 92%, 29%, 0.04);
 }
 
@@ -257,6 +298,8 @@ body {
     font-size: var(--fs-body-M);
     font-weight: var(--fw-bold);
     text-decoration: none;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
     transition: 0.1s;
 }
 
@@ -270,12 +313,20 @@ body {
 /* #region */
 
 .footer-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     row-gap: 1rem;
-    justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     width: calc(100% + 2rem);
     height: 7.5rem;
     padding: 0 1rem;
@@ -285,8 +336,14 @@ body {
 }
 
 .footer__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 8.75rem;
     height: 3rem;
@@ -296,10 +353,16 @@ body {
     font-size: var(--fs-body-S);
     font-weight: var(--fw-bold);
     text-decoration: none;
+    -webkit-transition: 0.1s;
+    -o-transition: 0.1s;
     transition: 0.1s;
 }
 
 .footer__btn:hover {
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.5)), to(rgba(255, 255, 255, 0.5))), 
+    var(--linear-gradient-200);
+    background: -o-linear-gradient(bottom, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
+    var(--linear-gradient-200);
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), 
     var(--linear-gradient-200);
 }
@@ -325,13 +388,21 @@ body {
 @media only screen and (max-width: 739px) {
 
     .hero-section__banner-block {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
     .hero-section__banner-block img {
         max-width: 25rem;
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
         transform: scale(1.1);
     }
 
@@ -357,6 +428,8 @@ body {
     .hero-section__banner-block img {
         top: -15%;
         right: -45%;
+        -webkit-transform: scale(2.9);
+        -ms-transform: scale(2.9);
         transform: scale(2.9);
     }
 
@@ -383,6 +456,8 @@ body {
     }
 
     .hero-section__banner-block img {
+        -webkit-transform: scale(3);
+        -ms-transform: scale(3);
         transform: scale(3);
     }
 
@@ -443,10 +518,14 @@ body {
     .hero-section__banner-block img {
         top: -20%;
         right: -45%;
+        -webkit-transform: scale(4.5);
+        -ms-transform: scale(4.5);
         transform: scale(4.5);
     }
 
     .courses {
+        -webkit-column-gap: 1.88rem;
+        -moz-column-gap: 1.88rem;
         column-gap: 1.88rem;
         max-width: 75rem;
         margin: 0 auto;
